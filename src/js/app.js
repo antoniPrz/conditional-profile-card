@@ -56,13 +56,19 @@ function render(variables = {}) {
           <h3> ${city ? city : "Miami"}
                ${country ? country : "USA"}
           </h3>
-          <ul class="position-right">
-            <li><a href=${
-              twitter ? twitter : "https://twitter.com/rocketseat"
-            } ><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <ul class=${socialMediaPosition}>
+            <li><a href="https://twitter.com/${
+              twitter ? twitter : "rocketseat"
+            }"
+             ><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github ? github : "antoniprz"}"
+            ><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/${
+              linkedin ? linkedin : "antoni-pérez"
+            }"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              instagram ? instagram : "antonijarrod"
+            }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -83,7 +89,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
